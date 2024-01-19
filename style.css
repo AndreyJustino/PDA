@@ -94,12 +94,12 @@ nav{
 main{
     text-align: center;
     padding-top: 15px;
-    height: 200vh;
+    height: 100%;
     font-size: x-large;
 }
 
 section{
-    height: 171vh;
+    height: 100%;
     margin-top: 10px;
     display: flex;  
     flex-flow: row wrap;
