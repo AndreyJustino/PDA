@@ -56,7 +56,9 @@ jogoCartas.unshift("Valete de Paus")
 console.log(`linha 56 ${jogoCartas}`)
 
 jogoCartas.shift()
-console.log(`linha 59 ${jogoCartas}`)
+console.log(`linha 59 ${jogoCartas}`) 
+
+
 
 
 
