@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <div id="container">
+        <label for="Numero1"></label>
+        <input type="number" name="" id="Numero1">
+        
+        <label for="Numero2"></label>
+        <input type="number" name="" id="Numero2">
+        <label for="Operador"></label>
+        <input list="Operador1" id="Operador" name="Operador" />
+            <datalist id="Operador1">
+                <option value="somar"></option>
+                <option value="subtrair"></option>
+                <option value="dividir"></option>
+                <option value="multiplicar"></option>
+            </datalist>
+        <button onclick="calcular()">Calcular</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
