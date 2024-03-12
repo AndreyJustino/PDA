@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1 id="name">Temperatura: </h1>
+    <img src="" alt="aa">
+    <div></div>
+    <input type="text" id="cidade">
+    <button onclick="teste()">aaaaa</button>
+
+    <script>
+        // $("h1").text("Adrianaa")
+        // $("#name").css("color","red")
+        // $("div").html("<p>add p com jquery</p>")
+
+        /*function tratarReturn(dado){
+            $("h1").text(dado[0].name)
+        }
+
+        fetch("https://bobsburgers-api.herokuapp.com/characters/")
+        .then(res => res.json())
+        .then(data => tratarReturn(data))
+
+        fetch("https://bobsburgers-api.herokuapp.com/characters/")
+        .then(res => res.json())
+        .then(data => {
+            $("h1").text(data[0].name);
+            $("img").attr("src", data[4].image);
+        });*/
+
+        
+        // cidade.toLowerCase()
+        
+        
+        function pegandoTemperatura(){
+            const cidade = document.getElementById("cidade").value;
+
+            fetch(`https://goweather.herokuapp.com/weather/${cidade}`)
+            .then(res => res.json())
+            .then(data => {
+                $("h1").text(data.temperature);
+            })
+        }
+
+    </script>
+
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>
