@@ -10,15 +10,18 @@ function getApi(){
 }
 
 function fabrica(verbo, url){
-    const xhr = new XMLHttpRequest()
+    try{
+        const xhr = new XMLHttpRequest()
+    
+        xhr.onload = function() {
+            div.innerText += xhr.response 
+        }
 
-    xhr.onload = function() {
-        div.innerText += xhr.response 
+        xhr.open(verbo, url)
+    
+        xhr.send()
+
+    } catch(error){
+        console.log("Erro linha 26: " + error)
     }
-
-
-    xhr.open(verbo, url)
-
-    xhr.send()
-
 }

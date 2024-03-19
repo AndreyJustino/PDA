@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <input type="text" placeholder="nome da cidade" id="cidade">
+    <button>Clica</button>
+    <div>
+
+    </div>
+    <script>
+        $("button").click(function (e) { 
+            try{
+                e.preventDefault();
+                const input = $("#cidade").val()
+                const div = $("div")
+    
+                $.ajax({
+                    type: "GET",
+                    url: `https://goweather.herokuapp.com/weather/${input}`,
+                    dataType: "JSON",
+                    success: function (response) {
+                        div.html(JSON.stringify(response))
+                        console.log(response)
+                    }
+                });
+
+            } catch (error) {
+                console.log("Error linha 34:", error)
+            }
+
+        });
+
+        
+    </script>
+</body>
+</html>
