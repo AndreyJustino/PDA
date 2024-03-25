@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+</head>
+<body>
+    <script>
+        class Pessoa {
+            #nome
+
+            constructor (nome){
+                this.#nome = nome;
+            }
+
+            get nome(){
+                return this.#nome
+            }
+
+            set nome(novoNome){
+                if(typeof novoNome === "string" && novoNome.length > 0){
+                    this.#nome = novoNome
+                } else {
+                    throw "Nome não pode estar vazio"
+                }
+            }
+
+
+        }
+
+        class OutraPessoa{
+            constructor (nome1){
+                this.nome1 = nome1
+            }
+        }
+
+        // const pessoa1 = new Pessoa("Andrey1")
+        // const pessoa2 = new OutraPessoa("Andrey2")
+
+        // pessoa1.nome = ""
+
+        // console.log(pessoa1.nome)
+        // console.log(pessoa2.nome)
+
+        class Pet{
+            #nome;
+            #raca;
+            #tamanho;
+
+            constructor (nome,raca,tamanho){
+                this.#nome = nome
+                this.#raca = raca
+                this.#tamanho = tamanho
+            }
+
+            get nome(){
+                return this.#nome
+            }
+
+            get raca(){
+                return this.#raca
+            }
+
+            get tamanho(){
+                return this.#tamanho
+            }
+
+            set nome(novoNome){
+                if(typeof novoNome === "string" && novoNome.length > 0){
+                    this.#nome = novoNome
+                } else{
+                    throw "Nome não pode esta vazio"
+                }
+            }
+
+            set raca(novoRaca){
+                if(typeof novoRaca === "string" && novoRaca.length > 0){
+                    this.#raca = novoRaca
+                } else{
+                    throw "Raca não pode esta vazio"
+                }
+            }
+
+            set tamanho(novoTamanho){
+                if(typeof novoTamanho === "string" && novoTamanho.length > 0){
+                    this.#tamanho = novoTamanho
+                } else{
+                    throw "tamanho não pode esta vazio"
+                }
+            }
+
+        }
+
+        const pet = new Pet("Trevo","Caramelo","1.30")
+
+        console.log(pet.raca)
+    </script>
+</body>
+</html>
