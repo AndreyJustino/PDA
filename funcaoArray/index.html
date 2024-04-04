@@ -13,9 +13,11 @@
 
       console.log(newArrayNumber);
 
-      const arrayName = ["Ana", "Andrey", "Kaua"];
+      const arrayName = ["ana", "andrey", "kaua"];
 
-      const newArrayName = arrayName.map((value) => value.toUpperCase());
+      const newArrayName = arrayName.map(
+        (value) => value[0].toUpperCase() + value.substring(1)
+      );
 
       console.log(newArrayName);
     </script>
