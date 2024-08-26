@@ -21,8 +21,34 @@
 
       console.log(newArrayName);
 
-      const arrayImpar = arrayNumber.filter((value) => value % 2 != 0)
-      console.log(arrayImpar)
+      const arrayImpar = arrayNumber.filter((value) => value % 2 != 0);
+      console.log(arrayImpar);
+
+      const produto = [
+        {
+          nome: "Marmita",
+          preco: 25,
+        },
+        {
+          nome: "Ovo de Pascoa",
+          preco: 70,
+        },
+      ];
+
+      const caro = produto.filter((value) => value.preco >= 50);
+      console.log(caro);
+
+      const arrayMultiplicacao = arrayNumber.reduce(
+        (acumulador, value) => acumulador * value,
+        1
+      );
+      console.log(arrayMultiplicacao);
+
+      const precoTotal = produto.reduce(
+        (acumulador, value) => acumulador + value.preco,
+        0
+      );
+      console.log(precoTotal);
     </script>
   </body>
 </html>
